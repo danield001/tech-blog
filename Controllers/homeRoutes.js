@@ -22,3 +22,7 @@ router.get('/home', (req, res) => {
 router.get('/login', (req, res) => {
     res.render('login');
 });
+
+router.get('/newPost', (req, res) => {
+    res.render('post');
+});
