@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> Tech Blog </title>
+</head>
+<body>
+    <nav style="background-color:#abfaf6" class="navbar" role="navigation" aria-label="main navigation">
+  
+        <div id="navbarBasicExample" class="navbar-menu">
+         <div class="navbar-start">
+          <button class="navbar-item" id="home">Home</button>
+          <button class="navbar-item" id="play">Dashboard</button>
+          {{#if (eq loggedIn true)}}
+          <button class="navbar-item" id="quiz-select">Log Out</button>
+          {{else}}
+          <button class="navbar-item" id="account">Log In</button>
+          {{/if}}
+
+          </div>
+        </div> 
+        
+    </nav>
+    </header>
+    <main>
+      {{{body}}}
+    </main>
+</body>
+</html>
