@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
             req.session.user_username = dbUserData.username;
             console.log('Session saved successfully');
             console.log(req.session);
-            
+
             res.status(200).json(dbUserData);
         })
     } catch (err) {
@@ -71,3 +71,5 @@ router.post('/logout', async (req, res) => {
         res.status(404).end()
     }
 });
+
+module.exports = router;

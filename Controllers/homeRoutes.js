@@ -4,7 +4,7 @@ const path = require('path')
 
 const { BlogPost, User, Comment } = require('../Models/index')
 
-Router.get('/home', async (req, res) => {
+router.get('/home', async (req, res) => {
     try{
     const blogPosts = await BlogPost.findAll();
     const homeCont = blogPosts.map(blogPost => blogPost.toJSON());
