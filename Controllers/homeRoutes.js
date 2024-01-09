@@ -31,6 +31,10 @@ router.get('/dashboard', async (req, res) => {
     }
 });
 
+router.get('/', (red, res) => {
+    res.render('home');
+});
+
 router.get('/home', (req, res) => {
     res.render('home');
 });
