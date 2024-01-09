@@ -47,7 +47,7 @@ app.set('view engine', 'handlebars');
 app.use(routes);
 
 //server side routes
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home', { loggedIn: req.session.loggedIn });
 });
 
