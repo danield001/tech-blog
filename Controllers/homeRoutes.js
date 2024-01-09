@@ -15,9 +15,28 @@ router.get('/home', async (req, res) => {
         res.status(500).json(err);
     }
 });
+router.get('/dashboard', async (req, res) => {
+    try {
+        const user_id = req.session.user_id;
+
+        const userPosts = await BlogPost.findAll({
+            where: { created_by_user_id: user_id },
+        });
+
+        const dashCont = userPosts.map(userPost => userPost.toJSON());
+
+        res.render('dashboard', { userPosts: dashCont });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 router.get('/home', (req, res) => {
     res.render('home');
+});
+
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard');
 });
 
 router.get('/login', (req, res) => {

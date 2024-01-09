@@ -1,5 +1,15 @@
+<div>
+    {{#each userPosts}}
+    <div style="margin: 10px; margin-top: 0px; padding: 10px; border: 1px solid brown;">
+    <h1 style="background: brown; color: white; padding: 3px;">{{title}}</h1>
+    <h1 >{{content}}</h1>
+    <button id="delete-post">Delete Post</button>
+    {{/each}}
+</div>
+<div>
 <button id="new-post" style="background-color: brown; justify-content: space-around">
     New Post +
 </button>
+</div>
 
 <script src="../js/postSubmission.js"></script>
