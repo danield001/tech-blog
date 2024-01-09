@@ -8,6 +8,7 @@ router.get('/home', async (req, res) => {
     try{
     const blogPosts = await BlogPost.findAll();
     const homeCont = blogPosts.map(blogPost => blogPost.toJSON());
+    //const homeCont = postData.map((blogPost) => blogPost.get({ plain: true }));
 
     res.render('home', { posts: homeCont });
     } catch (err) {
@@ -26,3 +27,9 @@ router.get('/login', (req, res) => {
 router.get('/newPost', (req, res) => {
     res.render('post');
 });
+
+router.get('/comment', (req, res) => {
+    res.render('comment');
+});
+
+module.exports = router;

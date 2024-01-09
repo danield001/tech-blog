@@ -4,6 +4,7 @@ const { User } = require('../../Models');
 router.post('/', async (req, res) => {
     try {
         const dbUserData = await User.create({
+            username: req.body.username,
             email_address: req.body.email_address,
             password: req.body.password,
         });
@@ -72,4 +73,4 @@ router.post('/logout', async (req, res) => {
     }
 });
 
-module.exports = router;
+  module.exports = router;

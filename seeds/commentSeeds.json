@@ -1,0 +1,12 @@
+[
+    {
+        "comment_content": "i learnt that last week!",
+        "post_id": 1,
+        "user_id": 2
+    },
+    {
+        "comment_content": "Javascript is easy once you get the hang of it!",
+        "post_id": 2,
+        "user_id": 1
+    }
+]

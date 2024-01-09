@@ -24,20 +24,13 @@ BlogPost.init(
             allowNull: false,
             references: {
                 model: 'user',
-                key: 'id',
-            },
-        },
-        created_by_username: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            references: {
-                model: 'user',
-                key: 'username'
+                key: 'user_id',
             },
         },
         date_created: {
-            type: DataTypes.STRING,
+            type: DataTypes.DATE,
             allowNull: false,
+            defaultValue: DataTypes.NOW
         },
     },
     {

@@ -23,7 +23,7 @@ const hbs = exphbs.create({
 const sess = {
     secret: 'Super secret secret',
     cookie: {
-        maxAge: 60 * 60 * 100,
+        maxAge: 30 * 60 * 1000, // 30 minutes
         httpOnly: true,
         secure: false,
         sameSite: 'strict',
@@ -48,20 +48,21 @@ app.use(routes);
 
 //server side routes
 app.get('/home', (req, res) => {
-    res.render('home');
+    res.render('home', { loggedIn: req.session.loggedIn });
 });
 
 app.get('/login', (req, res) => {
-    res.render('login');
+    res.render('login', { loggedIn: req.session.loggedIn });
 });
 
 app.get('/newPost', (req, res) => {
-    res.render('post');
+    res.render('post', { loggedIn: req.session.loggedIn });
 });
 
 app.get('/dashboard', (req, res) => {
-    res.render('dashboard');
+    res.render('dashboard', { loggedIn: req.session.loggedIn });
 });
+
 sequelizeInstance.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });

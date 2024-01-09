@@ -1,8 +1,13 @@
+<main style="background-color: #566; height: 100vh; ">
 {{#each posts}}
-  <div style="margin: 2px; border: 1px solid brown;">
-    <h1 style="background: brown;">{{title}}</h1>
-    <p>{{content}}</p>
-    <h1>Created by User {{created_by_user_id}} | {{created_by_username}} | {{date_created}}</h1>
-    <button class="comment"> Add Comment + </button>
+  <div style="margin: 10px; margin-top: 0px; padding: 10px; border: 1px solid brown;">
+    <h1 style="background: brown; color: white; padding: 3px;">{{title}}</h1>
+    <h1 >{{content}}</h1>
+    <p>Created by User {{created_by_user_id}} | {{date_created}}</p>
+    <button class="comment" id="add-comment"> Add Comment + </button>
   </div>
 {{/each}}
+</main>
+
+<script src="../js/commentSubmission.js"></script>
+<script src="../js/commentSubmission.js"></script>

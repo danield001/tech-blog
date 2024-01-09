@@ -1,0 +1,12 @@
+[
+    {
+        "title": "MVC",
+        "content": "Today I learnt MVC",
+        "created_by_user_id": 1
+    },
+    {
+        "title": "Javascript",
+        "content": "Today I learnt Javascript",
+        "created_by_user_id": 2
+    }
+]
